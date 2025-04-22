@@ -1,0 +1,22 @@
+print("****SAYI TAHMİN ETME OYUNUNA HOŞ GELDİNİZ***")
+
+print("DİKKAT: 5 tahmin hakkınız var")
+import time
+import random
+tutulan_sayi = random.randint(0,100)
+for i in range(5):
+    alinan_sayi= int(input("OYUNA BAŞLAMAK İÇİN BİR SAYI TAHMİN EDİNİZ"))  
+    time.sleep(1)
+    if tutulan_sayi<alinan_sayi:
+         print("DAHA KÜÇÜK BİR SAYI TAHMİN EDİNİZ")
+    elif tutulan_sayi>alinan_sayi:
+         print("DAHA BÜYÜK BİR SAYI TAHMİN EDİNİZ")
+    else:
+         print("..TEBRİKLERR BİLDİNİZ..")
+         break
+    kalan_hak =4-i 
+    if kalan_hak>0:
+         print(f"KALAN HAK SAYINIZ:{kalan_hak}")
+    else:
+         print("..TÜM HAKLARINIZ TÜKENDİ. OYUNU KAYBETTİNİZ..")
+         print(f"TUTLAN SAYI::{tutulan_sayi}")
